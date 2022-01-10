@@ -1,8 +1,10 @@
 //  -----aliasların getirilmesi----- //
 
 var fs = require('fs');
+var path = require ('path');
 var express = require('express');
-var app = express()
+var app = express();
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get('/',function(req,res){
 
